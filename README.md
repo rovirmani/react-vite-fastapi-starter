@@ -133,9 +133,11 @@ Here are some common additions you might want to consider based on your project 
    - UI components (shadcn/ui, Material-UI)
 
 4. **Deployment**
-   - Vercel for frontend
-   - Railway/Heroku for backend
-   - Docker configuration
+   - Vercel 
+   - Railway
+   - Heroku
+   - Render
+   - and many more
 
 5. **Testing**
    - Frontend: Jest, React Testing Library
