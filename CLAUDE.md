@@ -49,25 +49,35 @@ react-vite-fastapi-starter/
 
 ## Development Commands
 
+### Full-Stack
 ```bash
-# Run both frontend and backend
-npm run dev:all
+npm run dev:all              # Run both frontend + backend
+```
 
-# Frontend only
+### Frontend
+```bash
 cd frontend
 npm install
 npm run dev                  # Vite dev server (http://localhost:5173)
-npm run build                # Production build
-npm run lint                 # ESLint check
-npm run preview              # Preview build
-
-# Backend only
-cd backend
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload    # FastAPI (http://localhost:8000)
+npm run build
+npm run lint
+npm run preview
 ```
+
+### Backend (uv)
+```bash
+uv sync                          # Install/sync Python dependencies
+uv run uvicorn app.main:app --reload    # FastAPI (http://localhost:8000)
+uv add <package>                  # Add new dependency
+```
+
+### Code Quality (ruff)
+```bash
+uv run ruff format .
+uv run ruff check .
+uv run ruff check --fix .
+```
+
 
 ## Environment & Config
 
